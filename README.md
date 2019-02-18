@@ -20,7 +20,8 @@ as a skeleton directory you can copy to start new sites.
 - `content/*.md`: Various sample pages. Each contains a `menu` key if it should
   appear in the nav bar.
 - `layouts/partials/head.html`: Common header. This contains `<head>` and the
-  opening `<body>` tag.
+  opening `<body>` tag, plus common header elements -- we build the nav bar
+  here.
 - `layouts/partials/foot.html`: Common footer. This contains any common footer
   elements and the closing `</body>` tag.
 - `static/main.css`: A CSS file as an example of static content.
