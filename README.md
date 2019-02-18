@@ -15,26 +15,27 @@ as a skeleton directory you can copy to start new sites.
 
 - `layouts/index.html`: Root template, for the main page only. It is very
   minimal, delegating mostly to common header and footer templates, and
-  inserting the page content.
-- `layouts/_default/single.html`: Default template for all other pages. This is actually identical to `layouts/index.html`.
-- `content/*.md`: Various sample pages. Each contains a `menu` key if it should
-  appear in the nav bar.
-- `layouts/partials/head.html`: Common header. This contains `<head>` and the
-  opening `<body>` tag, plus common header elements -- we build the nav bar
-  here.
-- `layouts/partials/foot.html`: Common footer. This contains any common footer
-  elements and the closing `</body>` tag.
-- `static/main.css`: A CSS file as an example of static content.
-
-The division between `layouts/index.html`/`layouts/_default/single.html` and
-the partials `head.html` and `foot.html` is not particularly elegant, but it
-allows for a lot of flexibility.
+  inserting the page content. This does a few things:
+    - We build the skeleton of the HTML page
+    - We build a common header
+    - We build a [menu bar](https://gohugo.io/content-management/menus/)
+    - We build a common footer
+- `layouts/_default/single.html`: Default template for all other pages. **This
+  is identical to `layouts/index.html`**, so all pages of the site will be
+  built from the same template.
+- `content/*.html`: Various sample pages. These use HTML as the
+  [content format](https://gohugo.io/content-management/formats/) because of
+  their `.html` extension. Each contains a `menu` key if it should appear in
+  the nav bar.
+- `static/main.css`: A CSS file as an example of a
+  [static file](https://gohugo.io/content-management/static-files/).
 
 Here are the common Hugo features we're **not** using:
 
-- We don't use a theme
+- We don't use a theme -- just the `layouts` directory.
 - We don't make (significant) use of any Markdown formatting
-- List pages (which contain lists of all pages of a certain type)
+- We don't define any list pages (which contain lists of all pages of a certain
+  type).
 
 ## How to use this
 
@@ -44,9 +45,17 @@ Here are the common Hugo features we're **not** using:
 
 ## Where to go from here
 
-Other features of Hugo that are useful for a static website:
+This example is very, very minimal -- Hugo has many other features that help us
+organize templats, or separate content from display logic:
 
+- [Base templates](https://gohugo.io/templates/base/) can be used to break up
+  the main template.
+- [Partial templates](https://gohugo.io/templates/partials/) can be used to
+  extract common functionality (the menu bar is a prime candidate for this).
 - [Shortcodes](https://gohugo.io/content-management/shortcodes/), particularly
   how to create your own [shortcode templates](https://gohugo.io/templates/shortcode-templates/).
 - [Hugo pipelines](https://gohugo.io/hugo-pipes/), which are particularly
-useful for asset minification.
+  useful for asset minification.
+- [Front matter](https://gohugo.io/content-management/front-matter/), the top
+  section of each page in `content`, can help separate page structure from
+  rendering a bit more.
