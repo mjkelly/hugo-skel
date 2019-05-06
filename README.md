@@ -52,7 +52,7 @@ things, but at the expense of duplicating things more.
 ## Where to go from here
 
 This example is very, very minimal -- Hugo has many other features that help us
-organize templats, or separate content from display logic:
+organize templates, or separate content from display logic:
 
 - [Partial templates](https://gohugo.io/templates/partials/) can be used to
   extract common functionality (the menu bar is a prime candidate for this).
