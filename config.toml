@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "Hugo Skeleton"
 # We disable taxonomies because we don't provide templates for them, and they
 # don't apply to our minimal use case.
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
