@@ -1,6 +1,15 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
+locale = "en_US"
 title = "Hugo Skeleton"
-# We disable taxonomies because we don't provide templates for them, and they
-# don't apply to our minimal use case.
-disableKinds = ["taxonomy"]
+
+# Render whatever we put in the repo. Required for recent Hugo versions.
+[security]
+  allowContent = ['.*']
+
+# Don't generate directories of pages based on categories or tags.
+disableKinds = ["categories", "tags"]
+
+# Disable taxonomies. We don't provide templates for them, and they don't apply
+# to our minimal use case.
+[taxonomies]
+# none
